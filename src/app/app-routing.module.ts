@@ -6,14 +6,21 @@ import { ForumComponent } from './forum/forum.component';
 import { RegistreComponent } from './auth/registre/registre.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeAuthentifierComponent } from './home-authentifier/home-authentifier.component';
+import { PostComponent } from './post/post.component';
+import { PostTileComponent } from './post-tile/post-tile.component';
+import { VoteButtonComponent } from './vote-button/vote-button.component';
+import { ViewPostComponent } from './view-post/view-post.component';
 
 const routes: Routes = [
   {path:'home' , component:HomeComponent},
   {path:'reclamation' , component:ReclamationComponent},
-  {path:'forum', component:ForumComponent},
   {path:'signup', component:RegistreComponent},
   {path:'signin', component:LoginComponent},
   {path:'homeauthentifier', component:HomeAuthentifierComponent},
+  {path:'post/create', component:PostComponent},
+  {path:'posts', component:PostTileComponent},
+  {path:'view-post/:id', component:ViewPostComponent},
+  {path:'forum', component:ForumComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }];
 
 @NgModule({
