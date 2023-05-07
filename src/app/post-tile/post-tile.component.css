@@ -1,0 +1,106 @@
+.post {
+    --post-line-color: #ccc;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #878A8C;
+    position: relative;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
+  .btnCommments {
+    border-radius: 2px solid;
+    color: #878A8C;
+    opacity: 1;
+  }
+  
+  .btnCommments:hover {
+    opacity: 0.65;
+    cursor: pointer;
+  }
+  
+  .post-title {
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 1;
+  }
+  
+  .posturl,
+  .postname {
+    color: black;
+  }
+  
+  .subreddit-text {
+    font-weight: bold;
+  }
+  
+  .post-text {
+    margin-top: 10px;
+  }
+  
+  .vote-container {
+    text-align: left;
+  }
+  
+  .vote-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: 5px;
+  }
+  
+  .upvote {
+    color: green;
+  }
+  
+  .downvote {
+    color: red;
+  }
+  
+  .vote-count {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+  
+  .fa {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1;
+  }
+  
+  .fa-chevron-circle-right {
+    color: #878A8C;
+  }
+  
+  .fa-trash,
+  .fa-pencil {
+    color: white;
+  }
+  
+  .fa-trash:hover,
+  .fa-pencil:hover {
+    color: #ccc;
+  }
+  
+  .btn-link {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 5px;
+  }
+  
+  .bg-dark {
+    background-color: #343a40;
+  }
+  
+  .username {
+    color: #007bff;
+    
+  }
+  

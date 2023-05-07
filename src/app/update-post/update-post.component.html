@@ -1,0 +1,39 @@
+
+
+  <!-- Display Posts-->
+  <div class="row post" *ngFor="let post of post">
+    <div class="col-md-1 vote-container">
+
+    </div>
+    <div class="col-md-11">
+      <!-- Section to Display Post Information-->
+      <div class="subreddit-info">
+        <a class="posturl" routerLink="">{{post.title}}</a>
+        <!-- <span> . Posted by <a class="username" routerLink="/user/{{post.userName}}">{{post.userName}}</a></span> -->
+        <!-- <span> . {{post.duration}}</span> -->
+      </div>
+      <hr />
+      <div class="post-title">
+        <a class="postname">{{post.title}}</a>
+      </div>
+      <div>
+        <p class="post-text" [innerHtml]="post.body"></p>
+      </div>
+      <hr />
+      <span>
+        <!-- <a class="btnCommments" role="button">
+          Comments({{post.commentCount}})
+        </a> -->
+       
+      </span>
+  
+  <!-- <td><button class="btn btn-danger" (click)="Update(post.postId)">Update</button></td> -->
+  <!-- <button (click)="updatePost()">Mettre à jour</button> -->
+
+  
+  
+  
+    </div>
+  </div>
+    
+    

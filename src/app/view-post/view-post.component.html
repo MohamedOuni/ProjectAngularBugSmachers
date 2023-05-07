@@ -1,0 +1,45 @@
+<div class="row post">
+  <div class="col-md-1">
+    <app-vote-button [post]="post"></app-vote-button>
+  </div>
+  <div class="col-md-11">
+    <span>
+      <span class="subreddit-text"><a class="post-url" href="">{{post}}</a></span>
+      <span> . Posted
+        <span> {{post!.dateCreated | date: 'MMM d, y'}} {{post!.dateCreated | date: 'shortTime'}} </span>
+        by          
+        <span> . Posted by <a class="username" routerLink="/user/{{post!.username}}">{{post!.username}}</a></span>
+    
+        <!-- <a class="username" href="">{{post!.username}}</a> -->
+      </span>
+    </span>
+    <hr />
+    <a routerLink="post.url" class="post-title">{{post!.title}}</a>
+    <div>
+      <p class="post-text" [innerHtml]="post!.body"></p>
+    </div>
+    <div class="post-comment">
+      <div class="form-group">
+        <label for="comment">Ajouter un commentaire</label>
+        <input type="text" class="form-control" name="comment.body" [(ngModel)]="comment.body" />
+        <button type="submit" class="login float-right" (click)="onSubmit()">Comment</button>
+      </div>
+    </div>
+    <hr />
+    <div *ngFor="let comment of comments">
+      <div class="comment">
+        <div class="username">
+          <!-- <a routerLink="/user/comment.username">{{comment.username}}</a> -->
+        </div>
+        <div>
+          <p>{{comment.dateCreated | date: 'MMM d, y'}} {{comment.dateCreated | date: 'shortTime'}}</p>
+        </div>
+        <b>{{comment.body}}</b>
+      </div>
+      <div class="post-actions">
+        <button class="btn btn-danger" (click)="onDelete(comment.id)">Delete</button>
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>

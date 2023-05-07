@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthServiceService } from '../services/auth-service.service';
 import { StorageServiceService } from '../services/storage-service.service';
 import { Router } from '@angular/router';
@@ -8,20 +8,14 @@ import { Router } from '@angular/router';
   templateUrl: './forum.component.html',
   styleUrls: ['./forum.component.css']
 })
-export class ForumComponent {
+export class ForumComponent implements OnInit {
 
   isLoggedIn = false;
 isLoginFailed = false;
 
 constructor(private storageService: StorageServiceService,  private router: Router) { }
-ngOnInit() {
-  if (this.storageService.isLoggedIn()) {
-    this.isLoggedIn = false;
-    this.router.navigate(['/forum']);
-  }
-  else {
-    this.router.navigate(['/home']);
-  }
 
+ngOnInit() {
+  
   }
 }
